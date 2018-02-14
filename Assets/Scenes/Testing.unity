@@ -210,6 +210,26 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114079047155231092, guid: 95ab56a2a008d954fad1c507697b0a3f,
+        type: 2}
+      propertyPath: m_Transition
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 114501442131866926, guid: 95ab56a2a008d954fad1c507697b0a3f,
+        type: 2}
+      propertyPath: m_Transition
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 114739392380377876, guid: 95ab56a2a008d954fad1c507697b0a3f,
+        type: 2}
+      propertyPath: m_Transition
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 114694030409132468, guid: 95ab56a2a008d954fad1c507697b0a3f,
+        type: 2}
+      propertyPath: m_Transition
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 95ab56a2a008d954fad1c507697b0a3f, type: 2}
   m_IsPrefabParent: 0
@@ -486,6 +506,50 @@ Transform:
   m_Father: {fileID: 1516892017}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 20, y: 0, z: 0}
+--- !u!1 &1040981625 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1889556790716274, guid: 95ab56a2a008d954fad1c507697b0a3f,
+    type: 2}
+  m_PrefabInternal: {fileID: 22932825}
+--- !u!95 &1040981627
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1040981625}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: dfec5eded1b3468409338b96c19c1121, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+--- !u!1 &1317955078 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1368509021311100, guid: 95ab56a2a008d954fad1c507697b0a3f,
+    type: 2}
+  m_PrefabInternal: {fileID: 22932825}
+--- !u!95 &1317955080
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1317955078}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: dfec5eded1b3468409338b96c19c1121, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!1 &1516892013
 GameObject:
   m_ObjectHideFlags: 0
@@ -568,6 +632,50 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1830995453 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1166402055005264, guid: 95ab56a2a008d954fad1c507697b0a3f,
+    type: 2}
+  m_PrefabInternal: {fileID: 22932825}
+--- !u!95 &1830995455
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1830995453}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: dfec5eded1b3468409338b96c19c1121, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+--- !u!1 &1878095126 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1371721130688872, guid: 95ab56a2a008d954fad1c507697b0a3f,
+    type: 2}
+  m_PrefabInternal: {fileID: 22932825}
+--- !u!95 &1878095128
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1878095126}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: dfec5eded1b3468409338b96c19c1121, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!1001 &1897652857
 Prefab:
   m_ObjectHideFlags: 0
