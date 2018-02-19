@@ -55,13 +55,13 @@ AnimationClip:
         tangentMode: 136
       - serializedVersion: 2
         time: 0.25
-        value: -350
+        value: -305
         inSlope: 0
         outSlope: 0
         tangentMode: 136
       - serializedVersion: 2
         time: 0.33333334
-        value: -400
+        value: -340
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -155,13 +155,13 @@ AnimationClip:
         tangentMode: 136
       - serializedVersion: 2
         time: 0.25
-        value: -350
+        value: -305
         inSlope: 0
         outSlope: 0
         tangentMode: 136
       - serializedVersion: 2
         time: 0.33333334
-        value: -400
+        value: -340
         inSlope: 0
         outSlope: 0
         tangentMode: 136
