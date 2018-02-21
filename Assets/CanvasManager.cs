@@ -11,6 +11,11 @@ public class CanvasManager : MonoBehaviour {
 	public GameObject canvas2; //Puzzle Hub
 	public GameObject canvas4; //Options hub
 
+	private GameObject activeSpeech; //active speech bubble
+
+	public GameObject speechPuzzles;
+	public GameObject speechOptions;
+
 	public GameObject hubCanvas;
 	public GameObject panel;
 
@@ -21,6 +26,8 @@ public class CanvasManager : MonoBehaviour {
 		Debug.Log ("Hey activating Canvas!");
 		activeCanvas = canvas0; //First active canvas is the main menu
 		activeCanvas.SetActive(true);
+		activeSpeech = speechPuzzles; //Setting a default active speech bubble
+		activeSpeech.SetActive(false); //No speech bubble in the beginning
 		pAnim = panel.GetComponent<Animator>();
 		onMM = true;
 	}
@@ -52,10 +59,16 @@ public class CanvasManager : MonoBehaviour {
 			else if (newCanvas == 2) {
 				activeCanvas = canvas2;
 				pAnim.SetInteger ("State", 2);
+				activeSpeech.SetActive (false);
+				activeSpeech = speechPuzzles;
+				activeSpeech.SetActive (true);
 			}
 			else if (newCanvas == 4) {
 				activeCanvas = canvas4;
 				pAnim.SetInteger ("State", 4);
+				activeSpeech.SetActive (false);
+				activeSpeech = speechOptions;
+				activeSpeech.SetActive (true);
 			}
 
 			//Going to the main menu
@@ -66,6 +79,7 @@ public class CanvasManager : MonoBehaviour {
 				onMM = true;
 				hubCanvas.SetActive (false);
 				panel.SetActive (false);
+				activeSpeech.SetActive (false);
 				activeCanvas = canvas0;
 			}
 		}
