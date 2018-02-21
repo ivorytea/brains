@@ -8,6 +8,7 @@ public class CanvasManager : MonoBehaviour {
 
 	public GameObject canvas0; //Main Menu
 	public GameObject canvas1; //First panel hub
+	public GameObject canvas2; //Puzzle Hub
 	public GameObject canvas4; //Options hub
 
 	public GameObject hubCanvas;
@@ -47,6 +48,10 @@ public class CanvasManager : MonoBehaviour {
 			if (newCanvas == 1) {
 				activeCanvas = canvas1;
 				pAnim.SetInteger ("State", 1);
+			}
+			else if (newCanvas == 2) {
+				activeCanvas = canvas2;
+				pAnim.SetInteger ("State", 2);
 			}
 			else if (newCanvas == 4) {
 				activeCanvas = canvas4;
