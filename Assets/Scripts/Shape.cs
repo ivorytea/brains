@@ -9,7 +9,8 @@ public class Shape : MonoBehaviour {
 	public Button[] appleButtons = new Button[5];
 	public Button wrongButton;
 	public Text wrongShape;
-	//public Image apple;
+	public Text win_text;
+	public Image apple;
 
 	void Start() {
 
@@ -18,8 +19,10 @@ public class Shape : MonoBehaviour {
 			appleColor [j].enabled = false;
 		}
 
-		// Hide wrong button text initially
+		// Hide text & final shape initially
 		wrongShape.enabled = false;
+		apple.enabled = false;
+		win_text.enabled = false;
 			
 		for (int i = 0; i < appleButtons.Length; i++) {
 			int closureIndex = i;
@@ -47,7 +50,7 @@ public class Shape : MonoBehaviour {
 	public void wrongClick () {
 		Debug.Log ("wrongClick");
 		wrongShape.enabled = true;
-		// reset game
+		Debug.Break ();
 	}
 
 	public bool isWin() {
@@ -62,6 +65,8 @@ public class Shape : MonoBehaviour {
 	}
 
 	public void win () {
+		apple.enabled = true;
+		win_text.enabled = true;
 		Debug.Log ("win!");
 		Debug.Break ();
 	}
