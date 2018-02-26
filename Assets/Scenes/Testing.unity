@@ -200,6 +200,7 @@ GameObject:
   m_Component:
   - component: {fileID: 208528515}
   - component: {fileID: 208528514}
+  - component: {fileID: 208528516}
   m_Layer: 0
   m_Name: Brain Character
   m_TagString: Untagged
@@ -264,6 +265,23 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &208528516
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 208528513}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: c92a3108d42d39a4cb0a2962f0d99744, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!1 &393525735 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1889556790716274, guid: 95ab56a2a008d954fad1c507697b0a3f,
@@ -1116,6 +1134,26 @@ Prefab:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 224993744445180312, guid: 95ab56a2a008d954fad1c507697b0a3f,
+        type: 2}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 224757242087391158, guid: 95ab56a2a008d954fad1c507697b0a3f,
+        type: 2}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 224157083934263418, guid: 95ab56a2a008d954fad1c507697b0a3f,
+        type: 2}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 224929412336958388, guid: 95ab56a2a008d954fad1c507697b0a3f,
+        type: 2}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 95ab56a2a008d954fad1c507697b0a3f, type: 2}
   m_IsPrefabParent: 0
@@ -1450,6 +1488,7 @@ MonoBehaviour:
   speechOptions: {fileID: 1285652062}
   hubCanvas: {fileID: 1126828513}
   panel: {fileID: 929442694}
+  brainChar: {fileID: 208528513}
 --- !u!4 &2134614261
 Transform:
   m_ObjectHideFlags: 0
