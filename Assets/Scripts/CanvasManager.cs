@@ -20,10 +20,12 @@ public class CanvasManager : MonoBehaviour {
 	public GameObject panel;
 
 	public GameObject brainChar;
+	public GameObject brainCav; //brain Cavity
 
 	private bool onMM; //Says if we are on the main menu or not
 	private Animator pAnim; //Animator for panel
 	private Animator cAnim; //Animator for character
+	private Animator bcAnim; //Animator for brain cavity
 	// Use this for initialization
 	void Start () {
 		Debug.Log ("Hey activating Canvas!");
@@ -33,6 +35,7 @@ public class CanvasManager : MonoBehaviour {
 		activeSpeech.SetActive(false); //No speech bubble in the beginning
 		pAnim = panel.GetComponent<Animator>();
 		cAnim = brainChar.GetComponent<Animator> ();
+		bcAnim = brainCav.GetComponent<Animator> ();
 		onMM = true;
 	}
 	
@@ -60,11 +63,13 @@ public class CanvasManager : MonoBehaviour {
 				activeCanvas = canvas1;
 				pAnim.SetInteger ("State", 1);
 				cAnim.SetBool ("isSmall", false);
+				bcAnim.SetBool ("isSmall", false);
 			}
 			else if (newCanvas == 2) {
 				activeCanvas = canvas2;
 				pAnim.SetInteger ("State", 2);
 				cAnim.SetBool ("isSmall", true);
+				bcAnim.SetBool ("isSmall", true);
 				activeSpeech.SetActive (false);
 				activeSpeech = speechPuzzles;
 				activeSpeech.SetActive (true);
@@ -73,6 +78,7 @@ public class CanvasManager : MonoBehaviour {
 				activeCanvas = canvas4;
 				pAnim.SetInteger ("State", 4);
 				cAnim.SetBool ("isSmall", true);
+				bcAnim.SetBool ("isSmall", true);
 				activeSpeech.SetActive (false);
 				activeSpeech = speechOptions;
 				activeSpeech.SetActive (true);
@@ -82,6 +88,7 @@ public class CanvasManager : MonoBehaviour {
 		} else {
 			pAnim.SetInteger ("State", 0);
 			cAnim.SetBool ("isSmall", false);
+			bcAnim.SetBool ("isSmall", false);
 			//Checks to see if we are entering the main menu and, if so, turns off certain components
 			if (onMM == false) {
 				onMM = true;

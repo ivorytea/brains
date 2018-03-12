@@ -625,6 +625,7 @@ MonoBehaviour:
   speed: 0.1
   minPos: -0.07
   maxPos: 5.51
+  brainCavity: {fileID: 996521773}
 --- !u!1001 &1788759963
 Prefab:
   m_ObjectHideFlags: 0
@@ -1086,6 +1087,7 @@ MonoBehaviour:
   hubCanvas: {fileID: 1126828513}
   panel: {fileID: 929442694}
   brainChar: {fileID: 208528513}
+  brainCav: {fileID: 996521773}
 --- !u!4 &2134614261
 Transform:
   m_ObjectHideFlags: 0
