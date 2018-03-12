@@ -10,7 +10,7 @@ public class Shape : MonoBehaviour {
 	//public Button[] appleButtons = new Button[5];
 	public Button[] shapeButtons;
 	public Button wrongButton;
-	public Text wrongShape;
+	public Image wrongShape;
 	public Text win_text;
 	public Image shapeFace;
 
