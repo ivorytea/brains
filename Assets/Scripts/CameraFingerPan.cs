@@ -21,5 +21,9 @@ public class CameraFingerPan : MonoBehaviour {
 					transform.Translate (-touchDeltaPosition.x * speed, 0, 0);
 			}
 		}
+		else
+		{
+			transform.position = new Vector3(3.12f, 1, -10);
+		}
 }
 }
