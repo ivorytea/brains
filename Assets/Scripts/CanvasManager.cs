@@ -9,6 +9,7 @@ public class CanvasManager : MonoBehaviour {
 	public GameObject canvas0; //Main Menu
 	public GameObject canvas1; //First panel hub
 	public GameObject canvas2; //Puzzle Hub
+	public GameObject canvas3; //Shopping Hub
 	public GameObject canvas4; //Options hub
 
 	private GameObject activeSpeech; //active speech bubble
@@ -68,6 +69,15 @@ public class CanvasManager : MonoBehaviour {
 			else if (newCanvas == 2) {
 				activeCanvas = canvas2;
 				pAnim.SetInteger ("State", 2);
+				cAnim.SetBool ("isSmall", true);
+				bcAnim.SetBool ("isSmall", true);
+				activeSpeech.SetActive (false);
+				activeSpeech = speechPuzzles;
+				activeSpeech.SetActive (true);
+			}
+			else if (newCanvas == 3) {
+				activeCanvas = canvas3;
+				pAnim.SetInteger ("State", 3);
 				cAnim.SetBool ("isSmall", true);
 				bcAnim.SetBool ("isSmall", true);
 				activeSpeech.SetActive (false);
