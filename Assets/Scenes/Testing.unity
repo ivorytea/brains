@@ -349,6 +349,11 @@ GameObject:
   m_PrefabParentObject: {fileID: 1246313272169592, guid: 95ab56a2a008d954fad1c507697b0a3f,
     type: 2}
   m_PrefabInternal: {fileID: 1788759963}
+--- !u!224 &929442698 stripped
+RectTransform:
+  m_PrefabParentObject: {fileID: 224864139198318854, guid: 95ab56a2a008d954fad1c507697b0a3f,
+    type: 2}
+  m_PrefabInternal: {fileID: 1788759963}
 --- !u!1 &996521773 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1285125349807310, guid: a39dd6868e5df7e429b82fd169c148eb,
@@ -755,15 +760,56 @@ Prefab:
     - target: {fileID: 224024540689684298, guid: 95ab56a2a008d954fad1c507697b0a3f,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: 63.00006
+      value: 63
       objectReference: {fileID: 0}
     - target: {fileID: 1246313272169592, guid: 95ab56a2a008d954fad1c507697b0a3f, type: 2}
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 224280570516500884, guid: 95ab56a2a008d954fad1c507697b0a3f,
+        type: 2}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4360492013051568, guid: 95ab56a2a008d954fad1c507697b0a3f, type: 2}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4628683192265204, guid: 95ab56a2a008d954fad1c507697b0a3f, type: 2}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 95ab56a2a008d954fad1c507697b0a3f, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &1844869254
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1844869255}
+  m_Layer: 0
+  m_Name: SHOPPING HUB
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1844869255
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1844869254}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -393.3248, y: -356.6383, z: -3.3613446}
+  m_LocalScale: {x: 3.3613446, y: 3.3613446, z: 3.3613446}
+  m_Children: []
+  m_Father: {fileID: 929442698}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1897652857
 Prefab:
   m_ObjectHideFlags: 0
