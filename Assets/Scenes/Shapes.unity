@@ -366,6 +366,7 @@ GameObject:
   - component: {fileID: 134788296}
   - component: {fileID: 134788295}
   - component: {fileID: 134788299}
+  - component: {fileID: 134788300}
   m_Layer: 5
   m_Name: Apple Canvas
   m_TagString: Untagged
@@ -480,6 +481,17 @@ MonoBehaviour:
   wrongShape: {fileID: 1586044265}
   win_text: {fileID: 895868560}
   shapeFace: {fileID: 737845421}
+--- !u!225 &134788300
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 134788294}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &248596955
 GameObject:
   m_ObjectHideFlags: 0

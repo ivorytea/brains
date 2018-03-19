@@ -17,8 +17,8 @@ public class Shape : MonoBehaviour {
 	void Start() {
 
 		// Hide all colored images initially
-		for (int j = 0; j < shapeColor.Length; j++) {
-			shapeColor [j].enabled = false;
+		for (int i = 0; i < shapeColor.Length; i++) {
+			shapeColor [i].enabled = false;
 		}
 
 		// Hide text & final shape initially
@@ -73,5 +73,4 @@ public class Shape : MonoBehaviour {
 		Debug.Log ("win!");
 		Debug.Break ();
 	}
-
 }
