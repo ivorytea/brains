@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class ItemManager : MonoBehaviour {
 
-	public Sprite poster;
+	public Sprite brainPoster;
+	public Sprite hangPoster;
 	public Sprite bottles;
 	public Sprite ovalRug;
 	public Sprite starRug;
@@ -28,7 +29,10 @@ public class ItemManager : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		
+		Item brainP = new Item (50, brainPoster);
+		Item hangP = new Item (50, hangPoster);
+		Item bottleShelf = new Item (100, bottles);
+		spaceA = new Item[] { brainP, hangP, bottleShelf }; 
 	}
 	
 	// Update is called once per frame
@@ -39,13 +43,11 @@ public class ItemManager : MonoBehaviour {
 
 public class Item {
 	private int cost;
-	private string name;
 	private bool sold;
 	private Sprite sprite;
 
-	public Item(int c, string n, Sprite s){
+	public Item(int c, Sprite s){
 		cost = c;
-		name = n;
 		sold = false;
 		sprite = s;
 	}
