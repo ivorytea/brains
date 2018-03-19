@@ -14,6 +14,8 @@ public class Shape : MonoBehaviour {
 	public Text win_text;
 	public Image shapeFace;
 
+	public Shapes_CanvasManager canvasManager;
+
 	void Start() {
 
 		// Hide all colored images initially
@@ -71,6 +73,6 @@ public class Shape : MonoBehaviour {
 		shapeFace.enabled = true;
 		win_text.enabled = true;
 		Debug.Log ("win!");
-		Debug.Break ();
+		canvasManager.winDetected (true); // NullReferenceException: Object reference not set to an instance of an object
 	}
 }
