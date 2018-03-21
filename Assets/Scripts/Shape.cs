@@ -73,6 +73,12 @@ public class Shape : MonoBehaviour {
 		shapeFace.enabled = true;
 		win_text.enabled = true;
 		Debug.Log ("win!");
+		StartCoroutine (pauseWin ());
 		canvasManager.winDetected (true); // NullReferenceException: Object reference not set to an instance of an object
+	}
+
+	IEnumerator pauseWin() {
+		yield return new WaitForSeconds (2);
+		Debug.Log ("Delaying...");
 	}
 }

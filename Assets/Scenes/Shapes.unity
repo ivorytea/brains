@@ -480,7 +480,7 @@ MonoBehaviour:
   wrongShape: {fileID: 1586044265}
   win_text: {fileID: 895868560}
   shapeFace: {fileID: 737845421}
-  canvasManager: {fileID: 0}
+  canvasManager: {fileID: 744459716}
 --- !u!1 &248596955
 GameObject:
   m_ObjectHideFlags: 0
@@ -605,7 +605,7 @@ MonoBehaviour:
   wrongShape: {fileID: 1586044265}
   win_text: {fileID: 895868560}
   shapeFace: {fileID: 51917226}
-  canvasManager: {fileID: 0}
+  canvasManager: {fileID: 744459716}
 --- !u!1 &252942791
 GameObject:
   m_ObjectHideFlags: 0
@@ -2041,7 +2041,7 @@ MonoBehaviour:
   wrongShape: {fileID: 1586044265}
   win_text: {fileID: 895868560}
   shapeFace: {fileID: 1927034510}
-  canvasManager: {fileID: 0}
+  canvasManager: {fileID: 744459716}
 --- !u!114 &649145775
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2304,7 +2304,7 @@ MonoBehaviour:
   wrongShape: {fileID: 1586044265}
   win_text: {fileID: 895868560}
   shapeFace: {fileID: 41907545}
-  canvasManager: {fileID: 0}
+  canvasManager: {fileID: 744459716}
 --- !u!114 &683086123
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4730,7 +4730,7 @@ MonoBehaviour:
   wrongShape: {fileID: 1586044265}
   win_text: {fileID: 895868560}
   shapeFace: {fileID: 880680937}
-  canvasManager: {fileID: 0}
+  canvasManager: {fileID: 744459716}
 --- !u!114 &1230757537
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7975,7 +7975,7 @@ MonoBehaviour:
   wrongShape: {fileID: 1586044265}
   win_text: {fileID: 895868560}
   shapeFace: {fileID: 1485414595}
-  canvasManager: {fileID: 0}
+  canvasManager: {fileID: 744459716}
 --- !u!114 &2009561298
 MonoBehaviour:
   m_ObjectHideFlags: 0
