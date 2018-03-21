@@ -3,19 +3,23 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class startButton : MonoBehaviour {
+public class ShopButton : MonoBehaviour {
 
-	public GameObject CanvasManager;
+	public GameObject ItemManager;
+	public char space;
+
+	private Transform parent;
 
 	void Start()
 	{
 		Button btn = this.GetComponent<Button>();
 		btn.onClick.AddListener(TaskOnClick);
+		parent = transform;
 
 	}
 
 	void TaskOnClick()
 	{
-		CanvasManager.GetComponent<CanvasManager> ().CanvasChange (1);
+		ItemManager.GetComponent<ItemManager> ().displayShopItems (space,true,parent);
 	}
 }

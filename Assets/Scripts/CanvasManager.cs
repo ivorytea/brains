@@ -23,10 +23,13 @@ public class CanvasManager : MonoBehaviour {
 	public GameObject brainChar;
 	public GameObject brainCav; //brain Cavity
 
+	public GameObject itemManager;
+
 	private bool onMM; //Says if we are on the main menu or not
 	private Animator pAnim; //Animator for panel
 	private Animator cAnim; //Animator for character
 	private Animator bcAnim; //Animator for brain cavity
+
 	// Use this for initialization
 	void Start () {
 		Debug.Log ("Hey activating Canvas!");
