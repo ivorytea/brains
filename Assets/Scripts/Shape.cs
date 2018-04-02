@@ -54,7 +54,7 @@ public class Shape : MonoBehaviour {
 			shapeColor [i].enabled = false;
 		// Reset buttons
 		for (int i = 0; i < shapeButtons.Length; i++)
-			shapeButtons [i].enabled = true;
+			shapeButtons [i].gameObject.SetActive (true);
 	}
 
 	public bool isWin() {
