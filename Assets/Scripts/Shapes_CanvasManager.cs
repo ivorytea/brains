@@ -22,6 +22,7 @@ public class Shapes_CanvasManager : MonoBehaviour {
 		
 	}
 
+	// TODO: allPlayed logic to distinct method
 	void switchCanvas() {
 
 		if (allPlayed ()) {
@@ -54,8 +55,8 @@ public class Shapes_CanvasManager : MonoBehaviour {
 
 	// Called from Shape.cs if shape is won
 	public void winDetected(bool win) {
-		score += 5;
-			switchCanvas();
+		score += 5;  // Just adding 5 to score on a win for testing
+		switchCanvas();
 	}
 
 	// Determines if a shape has been played

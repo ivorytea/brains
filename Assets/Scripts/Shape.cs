@@ -74,13 +74,14 @@ public class Shape : MonoBehaviour {
 	public void win () {
 		Debug.Log ("Win!");
 		shapeFace.enabled = true;
-		canvasManager.winDetected (true);
+		//canvasManager.winDetected (true); // <- may be able to move to pauseWin()
 		// Need to pause after this
 	}
 
 	// TODO: This isn't workng
 	IEnumerator pauseWin() {
 		yield return new WaitForSeconds (2);
+		canvasManager.winDetected (true); // TODO: this looks like it fixed it, do addt'l testing
 	}
 
 	// TODO: Ditto
