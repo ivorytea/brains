@@ -32,11 +32,12 @@ public class ItemManager : MonoBehaviour {
 	private float incXVal;
 
 	//Lay out all items available for each space
-	private Item[] spaceA = new Item[3];
-	private Item[] spaceB = new Item[3];
-	private Item[] spaceC = new Item[3];
-	private Item[] spaceD = new Item[3];
-	private Item[] spaceE = new Item[3];
+	[HideInInspector]
+	public Item[] spaceA = new Item[3];
+	public Item[] spaceB = new Item[3];
+	public Item[] spaceC = new Item[3];
+	public Item[] spaceD = new Item[3];
+	public Item[] spaceE = new Item[3];
 
 
 	public int neurobucks = 0;
@@ -47,29 +48,29 @@ public class ItemManager : MonoBehaviour {
 		//startXVal = xVal;
 		incXVal = 80;
 
-		Item blindsItem = new Item (50, blinds);
-		Item curtainsItem = new Item (50, curtains);
-		Item windowsItem = new Item (100, windows);
+		Item blindsItem = new Item (50, blinds, 'a');
+		Item curtainsItem = new Item (50, curtains, 'a');
+		Item windowsItem = new Item (100, windows, 'a');
 		spaceA = new Item[] { blindsItem, curtainsItem, windowsItem }; 
 
-		Item dumbellItem = new Item (50, dumbell);
-		Item bagItem = new Item (50, bag);
-		Item jumpRopeItem = new Item (100, jumpRope);
+		Item dumbellItem = new Item (50, dumbell, 'b');
+		Item bagItem = new Item (50, bag, 'b');
+		Item jumpRopeItem = new Item (100, jumpRope, 'b');
 		spaceB = new Item[] { dumbellItem, bagItem, jumpRopeItem }; 
 
-		Item bikeItem = new Item (50, bike);
-		Item mirrorItem = new Item (50, mirror);
-		Item treadmillItem = new Item (100, treadmill);
+		Item bikeItem = new Item (50, bike, 'c');
+		Item mirrorItem = new Item (50, mirror, 'c');
+		Item treadmillItem = new Item (100, treadmill, 'c');
 		spaceC = new Item[] { bikeItem, mirrorItem, treadmillItem }; 
 
-		Item ovalRugItem = new Item (50, ovalRug);
-		Item squareRugItem = new Item (50, squareRug);
-		Item starRugItem = new Item (100, starRug);
+		Item ovalRugItem = new Item (50, ovalRug, 'd');
+		Item squareRugItem = new Item (50, squareRug, 'd');
+		Item starRugItem = new Item (100, starRug, 'd');
 		spaceD = new Item[] { ovalRugItem, squareRugItem, starRugItem }; 
 
-		Item brainPItem = new Item (50, brainPoster);
-		Item hangPItem = new Item (50, hangPoster);
-		Item bottleShelfItem = new Item (100, bottles);
+		Item brainPItem = new Item (50, brainPoster, 'e');
+		Item hangPItem = new Item (50, hangPoster, 'e');
+		Item bottleShelfItem = new Item (100, bottles, 'e');
 		spaceE = new Item[] { brainPItem, hangPItem, bottleShelfItem }; 
 	}
 	
@@ -210,11 +211,13 @@ public class Item {
 	private int cost;
 	private bool sold;
 	private Sprite sprite;
+	public char space;
 
-	public Item(int c, Sprite s){
+	public Item(int c, Sprite s, char sp){
 		cost = c;
 		sold = false;
 		sprite = s;
+		space = sp;
 	}
 
 	public void sellItem(){
@@ -224,6 +227,7 @@ public class Item {
 	public bool getSold(){
 		return sold;
 	}
+		
 
 	public Sprite getSprite(){
 		return sprite;

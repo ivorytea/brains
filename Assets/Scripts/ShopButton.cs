@@ -23,4 +23,9 @@ public class ShopButton : MonoBehaviour {
 		ItemManager.GetComponent<ItemManager> ().displayShopItems (space,true,parent);
 	}
 
+	public void refresh()
+	{
+		ItemManager.GetComponent<ItemManager> ().displayShopItems (space,true,parent);
+	}
+
 }
