@@ -5,13 +5,10 @@ using UnityEngine.UI;
 
 public class Shape : MonoBehaviour {
 
-	//public Image[] appleColor = new Image[5];
 	public Image[] shapeColor;
-	//public Button[] appleButtons = new Button[5];
 	public Button[] shapeButtons;
 	public Button wrongButton;
 	public Image wrongShape;
-	public Text win_text;
 	public Image shapeFace;
 
 	public Shapes_CanvasManager canvasManager;
@@ -23,15 +20,12 @@ public class Shape : MonoBehaviour {
 			shapeColor [i].enabled = false;
 		}
 
-		// Hide text & final shape initially
-
+		// Hide final shape and X initially
 		wrongShape.enabled = false;
 		shapeFace.enabled = false;
-		win_text.enabled = false;
 			
 		for (int i = 0; i < shapeButtons.Length; i++) {
 			int closureIndex = i;
-			//Debug.Log(appleButtons[i]);
 			shapeButtons[i] = shapeButtons[i].GetComponent<Button> ();
 			shapeButtons[closureIndex].onClick.AddListener(() => btnClick(closureIndex));
 		}
@@ -55,7 +49,12 @@ public class Shape : MonoBehaviour {
 	public void wrongClick () {
 		Debug.Log ("wrongClick");
 		wrongShape.enabled = true;
-		Debug.Break ();
+		// Reset shape
+		for (int i = 0; i < shapeColor.Length; i++)
+			shapeColor [i].enabled = false;
+		// Reset buttons
+		for (int i = 0; i < shapeButtons.Length; i++)
+			shapeButtons [i].enabled = true;
 	}
 
 	public bool isWin() {
@@ -71,12 +70,12 @@ public class Shape : MonoBehaviour {
 
 	public void win () {
 		shapeFace.enabled = true;
-		win_text.enabled = true;
 		Debug.Log ("win!");
 		StartCoroutine (pauseWin ());
-		canvasManager.winDetected (true); // NullReferenceException: Object reference not set to an instance of an object
+		canvasManager.winDetected (true);
 	}
 
+	// This isn't workng
 	IEnumerator pauseWin() {
 		yield return new WaitForSeconds (2);
 		Debug.Log ("Delaying...");

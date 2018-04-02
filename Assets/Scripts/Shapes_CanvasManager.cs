@@ -1,22 +1,38 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Shapes_CanvasManager : MonoBehaviour {
 
 	public GameObject[] canvas;
+	public GameObject scoreCanvas;
 	System.Random rnd = new System.Random();
 	public bool[] haveSeen;
+	private int score = 0;
+	public Text scoreText;
 
 	void Start() {
-		//for (int i = 0; i < haveSeen.Length; i++)
+		scoreCanvas.SetActive (false);
+		scoreText = GetComponent<Text> ();
 		switchCanvas ();
+	}
+
+	void Update() {
+		
 	}
 
 	void switchCanvas() {
 
 		if (allPlayed ()) {
-			Debug.Break ();
+			// Turn off shapes and move to score screen
+			Debug.Log ("Played all shapes");
+			Debug.Log ("Score is " + score);
+			for(int i = 0; i < canvas.Length; i++)
+				canvas [i].SetActive (false);
+			// Compute score
+			scoreCanvas.SetActive (true);
+			scoreText.text = score.ToString ();
 		}
 
 		else {
@@ -38,6 +54,7 @@ public class Shapes_CanvasManager : MonoBehaviour {
 
 	// Called from Shape.cs if shape is won
 	public void winDetected(bool win) {
+		score += 5;
 			switchCanvas();
 	}
 
