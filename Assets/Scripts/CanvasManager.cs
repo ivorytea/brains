@@ -87,7 +87,7 @@ public class CanvasManager : MonoBehaviour {
 				activeSpeech.SetActive (false);
 				activeSpeech = speechPuzzles;
 				activeSpeech.SetActive (true);
-				//ItemManager.GetComponent<ItemManager> ().displayShopItems ('a',true,parent);
+				itemManager.GetComponent<ItemManager> ().refreshShopItems ();
 			}
 			else if (newCanvas == 4) {
 				activeCanvas = canvas4;
@@ -107,7 +107,7 @@ public class CanvasManager : MonoBehaviour {
 				activeSpeech.SetActive (false);
 				activeSpeech = speechPuzzles;
 				activeSpeech.SetActive (true);
-				//ItemManager.GetComponent<ItemManager> ().displayShopItems ('a',true,parent);
+				itemManager.GetComponent<ItemManager> ().refreshShopItems ();
 			}
 
 			//Going to the main menu

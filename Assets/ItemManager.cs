@@ -97,8 +97,10 @@ public class ItemManager : MonoBehaviour {
 					//Depending on what item it is, get the sprite and make it the new image 
 					activeShopItems [numbOfItems].GetComponent<Image> ().sprite = spaceA [i].getSprite ();
 					//Depending on what item it is, get the cost and make it the new text
-					if(isDecorate == true)
+					if(isDecorate == false)
 						activeShopItems [numbOfItems].GetComponentInChildren<Text> ().text = spaceA [i].getCost();
+					else
+						activeShopItems [numbOfItems].GetComponentInChildren<Text> ().text = null;
 					//Attach item to itemButton script in Prefab
 					activeShopItems [numbOfItems].GetComponent<ItemButton>().holder = spaceA[i];
 					//Number of items displayed increases
@@ -119,8 +121,10 @@ public class ItemManager : MonoBehaviour {
 					//Depending on what item it is, get the sprite and make it the new image 
 					activeShopItems [numbOfItems].GetComponent<Image> ().sprite = spaceB [i].getSprite ();
 					//Depending on what item it is, get the cost and make it the new text
-					if(isDecorate == true)
+					if(isDecorate == false)
 						activeShopItems [numbOfItems].GetComponentInChildren<Text> ().text = spaceB [i].getCost();
+					else
+						activeShopItems [numbOfItems].GetComponentInChildren<Text> ().text = null;
 					//Attach item to itemButton script in Prefab
 					activeShopItems [numbOfItems].GetComponent<ItemButton>().holder = spaceB[i];
 					//Number of items displayed increases
@@ -141,8 +145,10 @@ public class ItemManager : MonoBehaviour {
 					//Depending on what item it is, get the sprite and make it the new image 
 					activeShopItems [numbOfItems].GetComponent<Image> ().sprite = spaceC [i].getSprite ();
 					//Depending on what item it is, get the cost and make it the new text
-					if(isDecorate == true)
+					if(isDecorate == false)
 						activeShopItems [numbOfItems].GetComponentInChildren<Text> ().text = spaceC [i].getCost();
+					else
+						activeShopItems [numbOfItems].GetComponentInChildren<Text> ().text = null;
 					//Attach item to itemButton script in Prefab
 					activeShopItems [numbOfItems].GetComponent<ItemButton>().holder = spaceC[i];
 					//Number of items displayed increases
@@ -164,8 +170,10 @@ public class ItemManager : MonoBehaviour {
 					//Depending on what item it is, get the sprite and make it the new image 
 					activeShopItems [numbOfItems].GetComponent<Image> ().sprite = spaceD [i].getSprite ();
 					//Depending on what item it is, get the cost and make it the new text
-					if(isDecorate == true)
+					if(isDecorate == false)
 						activeShopItems [numbOfItems].GetComponentInChildren<Text> ().text = spaceD [i].getCost();
+					else
+						activeShopItems [numbOfItems].GetComponentInChildren<Text> ().text = null;
 					//Attach item to itemButton script in Prefab
 					activeShopItems [numbOfItems].GetComponent<ItemButton>().holder = spaceD[i];
 					//Number of items displayed increases
@@ -186,8 +194,10 @@ public class ItemManager : MonoBehaviour {
 					//Depending on what item it is, get the sprite and make it the new image 
 					activeShopItems [numbOfItems].GetComponent<Image> ().sprite = spaceE [i].getSprite ();
 					//Depending on what item it is, get the cost and make it the new text
-					if(isDecorate == true)
-						activeShopItems [numbOfItems].GetComponentInChildren<Text> ().text = spaceE [i].getCost();
+					if (isDecorate == false)
+						activeShopItems [numbOfItems].GetComponentInChildren<Text> ().text = spaceE [i].getCost ();
+					else
+						activeShopItems [numbOfItems].GetComponentInChildren<Text> ().text = null;
 					//Attach item to itemButton script in Prefab
 					activeShopItems [numbOfItems].GetComponent<ItemButton>().holder = spaceE[i];
 					//Number of items displayed increases
