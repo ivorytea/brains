@@ -38,7 +38,7 @@ public class Shape : MonoBehaviour {
 	void Update() {
 		if (isWin ()) {
 			win ();
-			StartCoroutine (pauseWin());  // TODO: This is a big mess
+			StartCoroutine (pauseWin());
 		}
 	}
 
@@ -57,7 +57,11 @@ public class Shape : MonoBehaviour {
 		// Reset buttons
 		for (int i = 0; i < shapeButtons.Length; i++)
 			shapeButtons [i].gameObject.SetActive (true);
-		pauseWrong ();  // TODO: not working here either
+		StartCoroutine (pauseWrong ());
+	}
+
+	public void resetX() {
+		wrongShape.enabled = false;
 	}
 
 	public bool isWin() {
@@ -74,19 +78,17 @@ public class Shape : MonoBehaviour {
 	public void win () {
 		Debug.Log ("Win!");
 		shapeFace.enabled = true;
-		//canvasManager.winDetected (true); // <- may be able to move to pauseWin()
-		// Need to pause after this
 	}
-
-	// TODO: This isn't workng
+		
 	IEnumerator pauseWin() {
 		yield return new WaitForSeconds (2);
-		canvasManager.winDetected (true); // TODO: this looks like it fixed it, do addt'l testing
+		canvasManager.winDetected (true);
 	}
 
 	// TODO: Ditto
 	IEnumerator pauseWrong() {
 		yield return new WaitForSeconds (2);
 		Debug.Log ("Delaying...");
+		resetX ();
 	}
 }
