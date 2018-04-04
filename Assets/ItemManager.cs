@@ -48,29 +48,29 @@ public class ItemManager : MonoBehaviour {
 		//startXVal = xVal;
 		incXVal = 80;
 
-		Item blindsItem = new Item (50, blinds, 'a');
-		Item curtainsItem = new Item (50, curtains, 'a');
-		Item windowsItem = new Item (100, windows, 'a');
+		Item blindsItem = new Item (50, blinds, 'a', 1);
+		Item curtainsItem = new Item (50, curtains, 'a',2);
+		Item windowsItem = new Item (100, windows, 'a',3);
 		spaceA = new Item[] { blindsItem, curtainsItem, windowsItem }; 
 
-		Item dumbellItem = new Item (50, dumbell, 'b');
-		Item bagItem = new Item (50, bag, 'b');
-		Item jumpRopeItem = new Item (100, jumpRope, 'b');
+		Item dumbellItem = new Item (50, dumbell, 'b',4);
+		Item bagItem = new Item (50, bag, 'b',5);
+		Item jumpRopeItem = new Item (100, jumpRope, 'b',6);
 		spaceB = new Item[] { dumbellItem, bagItem, jumpRopeItem }; 
 
-		Item bikeItem = new Item (50, bike, 'c');
-		Item mirrorItem = new Item (50, mirror, 'c');
-		Item treadmillItem = new Item (100, treadmill, 'c');
+		Item bikeItem = new Item (50, bike, 'c',7);
+		Item mirrorItem = new Item (50, mirror, 'c',8);
+		Item treadmillItem = new Item (100, treadmill, 'c',9);
 		spaceC = new Item[] { bikeItem, mirrorItem, treadmillItem }; 
 
-		Item ovalRugItem = new Item (50, ovalRug, 'd');
-		Item squareRugItem = new Item (50, squareRug, 'd');
-		Item starRugItem = new Item (100, starRug, 'd');
+		Item ovalRugItem = new Item (50, ovalRug, 'd',10);
+		Item squareRugItem = new Item (50, squareRug, 'd',11);
+		Item starRugItem = new Item (100, starRug, 'd',12);
 		spaceD = new Item[] { ovalRugItem, squareRugItem, starRugItem }; 
 
-		Item brainPItem = new Item (50, brainPoster, 'e');
-		Item hangPItem = new Item (50, hangPoster, 'e');
-		Item bottleShelfItem = new Item (100, bottles, 'e');
+		Item brainPItem = new Item (50, brainPoster, 'e',13);
+		Item hangPItem = new Item (50, hangPoster, 'e',14);
+		Item bottleShelfItem = new Item (100, bottles, 'e',15);
 		spaceE = new Item[] { brainPItem, hangPItem, bottleShelfItem }; 
 	}
 	
@@ -196,7 +196,7 @@ public class ItemManager : MonoBehaviour {
 	public void refreshShopItems()
 	{
 		if (numbOfItems != 0) {
-			for (int i = 0; i < activeShopItems.Length; i++) {
+			for (int i = 0; i < numbOfItems; i++) {
 				GameObject.Destroy (activeShopItems [i].gameObject);
 				Debug.Log ("WOOT DESTROY " + i);
 			}
@@ -212,12 +212,14 @@ public class Item {
 	private bool sold;
 	private Sprite sprite;
 	public char space;
+	private int id;
 
-	public Item(int c, Sprite s, char sp){
+	public Item(int c, Sprite s, char sp, int i){
 		cost = c;
 		sold = false;
 		sprite = s;
 		space = sp;
+		id = i;
 	}
 
 	public void sellItem(){
@@ -231,6 +233,10 @@ public class Item {
 
 	public Sprite getSprite(){
 		return sprite;
+	}
+
+	public int getId(){
+		return id;
 	}
 
 	public string getCost(){

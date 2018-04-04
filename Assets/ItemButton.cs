@@ -8,7 +8,7 @@ using UnityEngine.UI;
 
 public class ItemButton : MonoBehaviour {
 
-	public GameObject ItemManager;
+	private GameObject ItemManager;
 	[HideInInspector]
 	public Item holder; //Item associated with this prefab
 
@@ -16,6 +16,7 @@ public class ItemButton : MonoBehaviour {
 	void Start () {
 		Button btn = this.GetComponent<Button>();
 		btn.onClick.AddListener(TaskOnClick);
+		ItemManager = GameObject.FindGameObjectWithTag ("ItemManager");
 	}
 	
 	void TaskOnClick()
@@ -28,7 +29,7 @@ public class ItemButton : MonoBehaviour {
 			if (holder.space == 'a') {
 				for(int i = 0; i < 3; i++)
 				{
-					if (ItemManager.GetComponent<ItemManager> ().spaceA [i].getSprite == holder.getSprite) {
+					if (ItemManager.GetComponent<ItemManager> ().spaceA [i].getId() == holder.getId() ) {
 						ItemManager.GetComponent<ItemManager> ().spaceA [i] = holder;
 						GetComponentInParent<ShopButton> ().refresh();
 					}
@@ -37,7 +38,7 @@ public class ItemButton : MonoBehaviour {
 			else if (holder.space == 'b') {
 				for(int i = 0; i < 3; i++)
 				{
-					if (ItemManager.GetComponent<ItemManager> ().spaceB [i].getSprite == holder.getSprite) {
+					if (ItemManager.GetComponent<ItemManager> ().spaceB [i].getId()  == holder.getId() ) {
 						ItemManager.GetComponent<ItemManager> ().spaceB [i] = holder;
 						GetComponentInParent<ShopButton> ().refresh();
 					}
@@ -46,7 +47,7 @@ public class ItemButton : MonoBehaviour {
 			else if (holder.space == 'c') {
 				for(int i = 0; i < 3; i++)
 				{
-					if (ItemManager.GetComponent<ItemManager> ().spaceC [i].getSprite == holder.getSprite) {
+					if (ItemManager.GetComponent<ItemManager> ().spaceC [i].getId()  == holder.getId() ) {
 						ItemManager.GetComponent<ItemManager> ().spaceC [i] = holder;
 						GetComponentInParent<ShopButton> ().refresh();
 					}
@@ -55,7 +56,7 @@ public class ItemButton : MonoBehaviour {
 			else if (holder.space == 'd') {
 				for(int i = 0; i < 3; i++)
 				{
-					if (ItemManager.GetComponent<ItemManager> ().spaceD [i].getSprite == holder.getSprite) {
+					if (ItemManager.GetComponent<ItemManager> ().spaceD [i].getId()  == holder.getId() ) {
 						ItemManager.GetComponent<ItemManager> ().spaceD [i] = holder;
 						GetComponentInParent<ShopButton> ().refresh();
 					}
@@ -64,7 +65,7 @@ public class ItemButton : MonoBehaviour {
 			else if (holder.space == 'e') {
 				for(int i = 0; i < 3; i++)
 				{
-					if (ItemManager.GetComponent<ItemManager> ().spaceE [i].getSprite == holder.getSprite) {
+					if (ItemManager.GetComponent<ItemManager> ().spaceE [i].getId()  == holder.getId() ) {
 						ItemManager.GetComponent<ItemManager> ().spaceE [i] = holder;
 						GetComponentInParent<ShopButton> ().refresh();
 					}
