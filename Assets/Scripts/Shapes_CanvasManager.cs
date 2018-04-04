@@ -11,6 +11,9 @@ public class Shapes_CanvasManager : MonoBehaviour {
 	public bool[] haveSeen;
 	private int score = 0;
 	public Text scoreText;
+	private float timeLeft = 30.0f;
+	public Text timeDisp;
+	private bool gameOver = false;
 
 	void Start() {
 		scoreCanvas.SetActive (false);
@@ -19,13 +22,18 @@ public class Shapes_CanvasManager : MonoBehaviour {
 	}
 
 	void Update() {
-		
+		timeLeft -= Time.deltaTime;
+		timeDisp.text = timeLeft.ToString ();
+		if ( timeLeft < 0 )
+		{
+			gameOver = true;
+		}
 	}
 
 	// TODO: allPlayed logic to distinct method
 	void switchCanvas() {
 
-		if (allPlayed ()) {
+		if (allPlayed () | gameOver) {
 			// Turn off shapes and move to score screen
 			Debug.Log ("Played all shapes");
 			Debug.Log ("Score is " + score);
