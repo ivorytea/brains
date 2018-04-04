@@ -20,12 +20,12 @@ public class ShopButton : MonoBehaviour {
 
 	void TaskOnClick()
 	{
-		ItemManager.GetComponent<ItemManager> ().displayShopItems (space,true,parent);
+		ItemManager.GetComponent<ItemManager> ().displayShopItems (space,parent);
 	}
 
 	public void refresh()
 	{
-		ItemManager.GetComponent<ItemManager> ().displayShopItems (space,true,parent);
+		ItemManager.GetComponent<ItemManager> ().displayShopItems (space,parent);
 	}
 
 }

@@ -80,6 +80,7 @@ public class CanvasManager : MonoBehaviour {
 			}
 			else if (newCanvas == 3) {
 				activeCanvas = canvas3;
+				itemManager.GetComponent<ItemManager>().isDecorate = false;
 				pAnim.SetInteger ("State", 3);
 				cAnim.SetBool ("isSmall", true);
 				bcAnim.SetBool ("isSmall", true);
@@ -96,6 +97,17 @@ public class CanvasManager : MonoBehaviour {
 				activeSpeech.SetActive (false);
 				activeSpeech = speechOptions;
 				activeSpeech.SetActive (true);
+			}
+			else if (newCanvas == 5) {
+				activeCanvas = canvas3; //Same canvas as shop, but its tehnically decorate
+				itemManager.GetComponent<ItemManager>().isDecorate = true;
+				pAnim.SetInteger ("State", 3);
+				cAnim.SetBool ("isSmall", true);
+				bcAnim.SetBool ("isSmall", true);
+				activeSpeech.SetActive (false);
+				activeSpeech = speechPuzzles;
+				activeSpeech.SetActive (true);
+				//ItemManager.GetComponent<ItemManager> ().displayShopItems ('a',true,parent);
 			}
 
 			//Going to the main menu

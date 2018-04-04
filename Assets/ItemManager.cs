@@ -38,6 +38,7 @@ public class ItemManager : MonoBehaviour {
 	public Item[] spaceC = new Item[3];
 	public Item[] spaceD = new Item[3];
 	public Item[] spaceE = new Item[3];
+	public bool isDecorate = true;
 
 
 	public int neurobucks = 0;
@@ -79,13 +80,14 @@ public class ItemManager : MonoBehaviour {
 		
 	}
 
-	public void displayShopItems(char space, bool isShop, Transform parent)
+	public void displayShopItems(char space, Transform parent)
 	{
 		refreshShopItems ();
 		if (space == 'a') {
 			for(int i = 0; i < spaceA.Length; i++)
 			{
-				if(spaceA[i].getSold() == false){
+				//This should work to where, if the shop should be in decorate mode, it will show stuff sold, and vice versa
+				if(spaceA[i].getSold() == isDecorate){
 					//Instatiate Item based on Prefab
 					activeShopItems [numbOfItems] = Instantiate (itemUIPrefab, new Vector3 (0, 0, 1),Quaternion.identity);
 					//Set it to be a parent of the space game object
@@ -95,7 +97,8 @@ public class ItemManager : MonoBehaviour {
 					//Depending on what item it is, get the sprite and make it the new image 
 					activeShopItems [numbOfItems].GetComponent<Image> ().sprite = spaceA [i].getSprite ();
 					//Depending on what item it is, get the cost and make it the new text
-					activeShopItems [numbOfItems].GetComponentInChildren<Text> ().text = spaceA [i].getCost();
+					if(isDecorate == true)
+						activeShopItems [numbOfItems].GetComponentInChildren<Text> ().text = spaceA [i].getCost();
 					//Attach item to itemButton script in Prefab
 					activeShopItems [numbOfItems].GetComponent<ItemButton>().holder = spaceA[i];
 					//Number of items displayed increases
@@ -106,7 +109,7 @@ public class ItemManager : MonoBehaviour {
 		} else if (space == 'b') {
 			for(int i = 0; i < spaceB.Length; i++)
 			{
-				if(spaceB[i].getSold() == false){
+				if(spaceB[i].getSold() == isDecorate){
 					//Instatiate Item based on Prefab
 					activeShopItems [numbOfItems] = Instantiate (itemUIPrefab, new Vector3 (0, 0, 1),Quaternion.identity);
 					//Set it to be a parent of the space game object
@@ -116,7 +119,8 @@ public class ItemManager : MonoBehaviour {
 					//Depending on what item it is, get the sprite and make it the new image 
 					activeShopItems [numbOfItems].GetComponent<Image> ().sprite = spaceB [i].getSprite ();
 					//Depending on what item it is, get the cost and make it the new text
-					activeShopItems [numbOfItems].GetComponentInChildren<Text> ().text = spaceB [i].getCost();
+					if(isDecorate == true)
+						activeShopItems [numbOfItems].GetComponentInChildren<Text> ().text = spaceB [i].getCost();
 					//Attach item to itemButton script in Prefab
 					activeShopItems [numbOfItems].GetComponent<ItemButton>().holder = spaceB[i];
 					//Number of items displayed increases
@@ -127,7 +131,7 @@ public class ItemManager : MonoBehaviour {
 		} else if (space == 'c') {
 			for(int i = 0; i < spaceC.Length; i++)
 			{
-				if(spaceC[i].getSold() == false){
+				if(spaceC[i].getSold() == isDecorate){
 					//Instatiate Item based on Prefab
 					activeShopItems [numbOfItems] = Instantiate (itemUIPrefab, new Vector3 (0, 0, 1),Quaternion.identity);
 					//Set it to be a parent of the space game object
@@ -137,7 +141,8 @@ public class ItemManager : MonoBehaviour {
 					//Depending on what item it is, get the sprite and make it the new image 
 					activeShopItems [numbOfItems].GetComponent<Image> ().sprite = spaceC [i].getSprite ();
 					//Depending on what item it is, get the cost and make it the new text
-					activeShopItems [numbOfItems].GetComponentInChildren<Text> ().text = spaceC [i].getCost();
+					if(isDecorate == true)
+						activeShopItems [numbOfItems].GetComponentInChildren<Text> ().text = spaceC [i].getCost();
 					//Attach item to itemButton script in Prefab
 					activeShopItems [numbOfItems].GetComponent<ItemButton>().holder = spaceC[i];
 					//Number of items displayed increases
@@ -149,7 +154,7 @@ public class ItemManager : MonoBehaviour {
 		} else if (space == 'd') {
 			for(int i = 0; i < spaceD.Length; i++)
 			{
-				if(spaceD[i].getSold() == false){
+				if(spaceD[i].getSold() == isDecorate){
 					//Instatiate Item based on Prefab
 					activeShopItems [numbOfItems] = Instantiate (itemUIPrefab, new Vector3 (0, 0, 1),Quaternion.identity);
 					//Set it to be a parent of the space game object
@@ -159,7 +164,8 @@ public class ItemManager : MonoBehaviour {
 					//Depending on what item it is, get the sprite and make it the new image 
 					activeShopItems [numbOfItems].GetComponent<Image> ().sprite = spaceD [i].getSprite ();
 					//Depending on what item it is, get the cost and make it the new text
-					activeShopItems [numbOfItems].GetComponentInChildren<Text> ().text = spaceD [i].getCost();
+					if(isDecorate == true)
+						activeShopItems [numbOfItems].GetComponentInChildren<Text> ().text = spaceD [i].getCost();
 					//Attach item to itemButton script in Prefab
 					activeShopItems [numbOfItems].GetComponent<ItemButton>().holder = spaceD[i];
 					//Number of items displayed increases
@@ -170,7 +176,7 @@ public class ItemManager : MonoBehaviour {
 		} else if (space == 'e') {
 			for(int i = 0; i < spaceE.Length; i++)
 			{
-				if(spaceE[i].getSold() == false){
+				if(spaceE[i].getSold() == isDecorate){
 					//Instatiate Item based on Prefab
 					activeShopItems [numbOfItems] = Instantiate (itemUIPrefab, new Vector3 (0, 0, 1),Quaternion.identity);
 					//Set it to be a parent of the space game object
@@ -180,7 +186,8 @@ public class ItemManager : MonoBehaviour {
 					//Depending on what item it is, get the sprite and make it the new image 
 					activeShopItems [numbOfItems].GetComponent<Image> ().sprite = spaceE [i].getSprite ();
 					//Depending on what item it is, get the cost and make it the new text
-					activeShopItems [numbOfItems].GetComponentInChildren<Text> ().text = spaceE [i].getCost();
+					if(isDecorate == true)
+						activeShopItems [numbOfItems].GetComponentInChildren<Text> ().text = spaceE [i].getCost();
 					//Attach item to itemButton script in Prefab
 					activeShopItems [numbOfItems].GetComponent<ItemButton>().holder = spaceE[i];
 					//Number of items displayed increases
@@ -192,6 +199,8 @@ public class ItemManager : MonoBehaviour {
 			Debug.Log ("Uhh.....well this shouldn't happen");
 		}
 	}
+
+
 
 	public void refreshShopItems()
 	{
