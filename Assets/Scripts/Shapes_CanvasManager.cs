@@ -11,13 +11,13 @@ public class Shapes_CanvasManager : MonoBehaviour {
 	public bool[] haveSeen;
 	private int score = 0;
 	public Text scoreText;
-	private float timeLeft = 30.0f;
+	private float timeLeft = 10.0f; // Set to game time in seconds
 	public Text timeDisp;
 	private bool gameOver = false;
 
 	void Start() {
 		scoreCanvas.SetActive (false);
-		scoreText = GetComponent<Text> ();
+		//scoreText = GetComponent<Text> ();
 		switchCanvas ();
 	}
 
@@ -28,12 +28,25 @@ public class Shapes_CanvasManager : MonoBehaviour {
 		{
 			gameOver = true;
 		}
-	}
 
-	// TODO: allPlayed logic to distinct method
+		if (scoreText == null) {
+			Debug.Log ("ERR: scoreText set to null");
+			Debug.Break ();
+		}
+			
+		// TODO: refactor
+		if (gameOver) {
+			Debug.Log ("Score is " + score);
+			for (int i = 0; i < canvas.Length; i++)
+				canvas [i].SetActive (false);
+			scoreCanvas.SetActive (true);
+			scoreText.text = score.ToString ();
+		}
+	}
+		
 	void switchCanvas() {
 
-		if (allPlayed () | gameOver) {
+		if (allPlayed ()) {
 			// Turn off shapes and move to score screen
 			Debug.Log ("Played all shapes");
 			Debug.Log ("Score is " + score);
