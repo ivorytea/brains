@@ -22,6 +22,23 @@ public class ItemManager : MonoBehaviour {
 	public Sprite mirror;
 	public Sprite treadmill;
 
+	//Game objects in scene that are the items in the Brain Cavity
+	public GameObject brainPosterDecorate;
+	public GameObject hangPosterDecorate;
+	public GameObject bottlesDecorate;
+	public GameObject ovalRugDecorate;
+	public GameObject starRugDecorate;
+	public GameObject squareRugDecorate;
+	public GameObject blindsDecorate;
+	public GameObject curtainsDecorate;
+	public GameObject windowsDecorate;
+	public GameObject dumbellDecorate;
+	public GameObject bagDecorate;
+	public GameObject jumpRopeDecorate;
+	public GameObject bikeDecorate;
+	public GameObject mirrorDecorate;
+	public GameObject treadmillDecorate;
+
 	public GameObject itemUIPrefab;
 	private GameObject[] activeShopItems = new GameObject[3];
 	private int numbOfItems = 0; //Number of items shown in the current shop/decorate UI
@@ -49,29 +66,29 @@ public class ItemManager : MonoBehaviour {
 		//startXVal = xVal;
 		incXVal = 80;
 
-		Item blindsItem = new Item (50, blinds, 'a', 1);
-		Item curtainsItem = new Item (50, curtains, 'a',2);
-		Item windowsItem = new Item (100, windows, 'a',3);
+		Item blindsItem = new Item (50, blinds, 'a', 1, blindsDecorate);
+		Item curtainsItem = new Item (50, curtains, 'a',2, curtainsDecorate);
+		Item windowsItem = new Item (100, windows, 'a',3, windowsDecorate);
 		spaceA = new Item[] { blindsItem, curtainsItem, windowsItem }; 
 
-		Item dumbellItem = new Item (50, dumbell, 'b',4);
-		Item bagItem = new Item (50, bag, 'b',5);
-		Item jumpRopeItem = new Item (100, jumpRope, 'b',6);
+		Item dumbellItem = new Item (50, dumbell, 'b',4, dumbellDecorate);
+		Item bagItem = new Item (50, bag, 'b',5, bagDecorate);
+		Item jumpRopeItem = new Item (100, jumpRope, 'b',6, jumpRopeDecorate);
 		spaceB = new Item[] { dumbellItem, bagItem, jumpRopeItem }; 
 
-		Item bikeItem = new Item (50, bike, 'c',7);
-		Item mirrorItem = new Item (50, mirror, 'c',8);
-		Item treadmillItem = new Item (100, treadmill, 'c',9);
+		Item bikeItem = new Item (50, bike, 'c',7, bikeDecorate);
+		Item mirrorItem = new Item (50, mirror, 'c',8, mirrorDecorate);
+		Item treadmillItem = new Item (100, treadmill, 'c',9, treadmillDecorate);
 		spaceC = new Item[] { bikeItem, mirrorItem, treadmillItem }; 
 
-		Item ovalRugItem = new Item (50, ovalRug, 'd',10);
-		Item squareRugItem = new Item (50, squareRug, 'd',11);
-		Item starRugItem = new Item (100, starRug, 'd',12);
+		Item ovalRugItem = new Item (50, ovalRug, 'd',10, ovalRugDecorate);
+		Item squareRugItem = new Item (50, squareRug, 'd',11, squareRugDecorate);
+		Item starRugItem = new Item (100, starRug, 'd',12, starRugDecorate);
 		spaceD = new Item[] { ovalRugItem, squareRugItem, starRugItem }; 
 
-		Item brainPItem = new Item (50, brainPoster, 'e',13);
-		Item hangPItem = new Item (50, hangPoster, 'e',14);
-		Item bottleShelfItem = new Item (100, bottles, 'e',15);
+		Item brainPItem = new Item (50, brainPoster, 'e',13, brainPosterDecorate);
+		Item hangPItem = new Item (50, hangPoster, 'e',14, hangPosterDecorate);
+		Item bottleShelfItem = new Item (100, bottles, 'e',15, bottlesDecorate);
 		spaceE = new Item[] { brainPItem, hangPItem, bottleShelfItem }; 
 	}
 	
@@ -232,13 +249,15 @@ public class Item {
 	private Sprite sprite;
 	public char space;
 	private int id;
+	public GameObject DecorateDisplay;
 
-	public Item(int c, Sprite s, char sp, int i){
+	public Item(int c, Sprite s, char sp, int i, GameObject d){
 		cost = c;
 		sold = false;
 		sprite = s;
 		space = sp;
 		id = i;
+		DecorateDisplay = d;
 	}
 
 	public void sellItem(){

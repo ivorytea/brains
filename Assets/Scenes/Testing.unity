@@ -493,7 +493,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &262180144
 Transform:
   m_ObjectHideFlags: 0
@@ -835,7 +835,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &480222769
 Transform:
   m_ObjectHideFlags: 0
@@ -988,7 +988,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &694634795
 Transform:
   m_ObjectHideFlags: 0
@@ -1134,7 +1134,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &860363203
 Transform:
   m_ObjectHideFlags: 0
@@ -1834,7 +1834,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1189522447
 Transform:
   m_ObjectHideFlags: 0
@@ -2400,6 +2400,21 @@ MonoBehaviour:
   bike: {fileID: 21300000, guid: b7860431ec8d3b64fbfb9c30b09d2a79, type: 3}
   mirror: {fileID: 21300000, guid: 6bbe865c94b748042ba81cccbae289d5, type: 3}
   treadmill: {fileID: 21300000, guid: ef5e6a1f8c2150e479c63bea8318286b, type: 3}
+  brainPosterDecorate: {fileID: 1165174846}
+  hangPosterDecorate: {fileID: 262180143}
+  bottlesDecorate: {fileID: 937969254}
+  ovalRugDecorate: {fileID: 445142457}
+  starRugDecorate: {fileID: 1189522446}
+  squareRugDecorate: {fileID: 298478426}
+  blindsDecorate: {fileID: 1125227251}
+  curtainsDecorate: {fileID: 1345103813}
+  windowsDecorate: {fileID: 480222768}
+  dumbellDecorate: {fileID: 167739448}
+  bagDecorate: {fileID: 694634794}
+  jumpRopeDecorate: {fileID: 1511185827}
+  bikeDecorate: {fileID: 694649437}
+  mirrorDecorate: {fileID: 860363202}
+  treadmillDecorate: {fileID: 1905927242}
   itemUIPrefab: {fileID: 1475044344372364, guid: f09dab5acc7f470408e069cffca4e49e,
     type: 2}
   isDecorate: 1
