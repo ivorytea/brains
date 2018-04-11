@@ -43,9 +43,8 @@ public class ItemManager : MonoBehaviour {
 	private GameObject[] activeShopItems = new GameObject[3];
 	private int numbOfItems = 0; //Number of items shown in the current shop/decorate UI
 
-	private float yVal;
-	private float xVal;
-	private float startXVal;
+	private float xScale;
+	private float yScale;
 	private float incXVal;
 
 	//Lay out all items available for each space
@@ -61,9 +60,8 @@ public class ItemManager : MonoBehaviour {
 	public int neurobucks = 9000;
 	// Use this for initialization
 	void Start () {
-		//yVal = -926;
-		//xVal = 2487;
-		//startXVal = xVal;
+		xScale = 11.476f;
+		yScale = 12.911f;
 		incXVal = 80;
 
 		Item blindsItem = new Item (50, blinds, 'a', 1, blindsDecorate);
@@ -106,11 +104,13 @@ public class ItemManager : MonoBehaviour {
 				//This should work to where, if the shop should be in decorate mode, it will show stuff sold, and vice versa
 				if(spaceA[i].getSold() == isDecorate){
 					//Instatiate Item based on Prefab
-					activeShopItems [numbOfItems] = Instantiate (itemUIPrefab, new Vector3 (0, 0, 1),Quaternion.identity);
+					activeShopItems [numbOfItems] = Instantiate (itemUIPrefab, parent.transform.position,parent.transform.rotation);
 					//Set it to be a parent of the space game object
-					activeShopItems [numbOfItems].transform.SetParent (parent);
+					activeShopItems [numbOfItems].transform.SetParent (parent,false);
+					//Set it to be a parent of the space game object
+					activeShopItems [numbOfItems].transform.position.Set(0,-90, 1);
 					//Depending on how many items are in the list for that space, space them out
-					activeShopItems [numbOfItems].transform.Translate (incXVal * numbOfItems,-30,0);
+					activeShopItems [numbOfItems].transform.Translate (incXVal * numbOfItems,0,0);
 					//Depending on what item it is, get the sprite and make it the new image 
 					activeShopItems [numbOfItems].GetComponent<Image> ().sprite = spaceA [i].getSprite ();
 					//Depending on what item it is, get the cost and make it the new text
@@ -130,11 +130,11 @@ public class ItemManager : MonoBehaviour {
 			{
 				if(spaceB[i].getSold() == isDecorate){
 					//Instatiate Item based on Prefab
-					activeShopItems [numbOfItems] = Instantiate (itemUIPrefab, new Vector3 (0, 0, 1),Quaternion.identity);
+					activeShopItems [numbOfItems] = Instantiate (itemUIPrefab, parent.transform.position,parent.transform.rotation);
 					//Set it to be a parent of the space game object
-					activeShopItems [numbOfItems].transform.SetParent (parent);
+					activeShopItems [numbOfItems].transform.SetParent (parent,false);
 					//Depending on how many items are in the list for that space, space them out
-					activeShopItems [numbOfItems].transform.Translate (incXVal * numbOfItems,-30,0);
+					activeShopItems [numbOfItems].transform.Translate (incXVal * numbOfItems,0,0);
 					//Depending on what item it is, get the sprite and make it the new image 
 					activeShopItems [numbOfItems].GetComponent<Image> ().sprite = spaceB [i].getSprite ();
 					//Depending on what item it is, get the cost and make it the new text
@@ -154,11 +154,11 @@ public class ItemManager : MonoBehaviour {
 			{
 				if(spaceC[i].getSold() == isDecorate){
 					//Instatiate Item based on Prefab
-					activeShopItems [numbOfItems] = Instantiate (itemUIPrefab, new Vector3 (0, 0, 1),Quaternion.identity);
+					activeShopItems [numbOfItems] = Instantiate (itemUIPrefab, parent.transform.position,parent.transform.rotation);
 					//Set it to be a parent of the space game object
-					activeShopItems [numbOfItems].transform.SetParent (parent);
+					activeShopItems [numbOfItems].transform.SetParent (parent,false);
 					//Depending on how many items are in the list for that space, space them out
-					activeShopItems [numbOfItems].transform.Translate (incXVal * numbOfItems,-30,0);
+					activeShopItems [numbOfItems].transform.Translate (incXVal * numbOfItems,0,0);
 					//Depending on what item it is, get the sprite and make it the new image 
 					activeShopItems [numbOfItems].GetComponent<Image> ().sprite = spaceC [i].getSprite ();
 					//Depending on what item it is, get the cost and make it the new text
@@ -179,11 +179,11 @@ public class ItemManager : MonoBehaviour {
 			{
 				if(spaceD[i].getSold() == isDecorate){
 					//Instatiate Item based on Prefab
-					activeShopItems [numbOfItems] = Instantiate (itemUIPrefab, new Vector3 (0, 0, 1),Quaternion.identity);
+					activeShopItems [numbOfItems] = Instantiate (itemUIPrefab, parent.transform.position,parent.transform.rotation);
 					//Set it to be a parent of the space game object
-					activeShopItems [numbOfItems].transform.SetParent (parent);
+					activeShopItems [numbOfItems].transform.SetParent (parent,false);
 					//Depending on how many items are in the list for that space, space them out
-					activeShopItems [numbOfItems].transform.Translate (incXVal * numbOfItems,-30,0);
+					activeShopItems [numbOfItems].transform.Translate (incXVal * numbOfItems,0,0);
 					//Depending on what item it is, get the sprite and make it the new image 
 					activeShopItems [numbOfItems].GetComponent<Image> ().sprite = spaceD [i].getSprite ();
 					//Depending on what item it is, get the cost and make it the new text
@@ -203,11 +203,11 @@ public class ItemManager : MonoBehaviour {
 			{
 				if(spaceE[i].getSold() == isDecorate){
 					//Instatiate Item based on Prefab
-					activeShopItems [numbOfItems] = Instantiate (itemUIPrefab, new Vector3 (0, 0, 1),Quaternion.identity);
+					activeShopItems [numbOfItems] = Instantiate (itemUIPrefab, parent.transform.position,parent.transform.rotation);
 					//Set it to be a parent of the space game object
-					activeShopItems [numbOfItems].transform.SetParent (parent);
+					activeShopItems [numbOfItems].transform.SetParent (parent,false);
 					//Depending on how many items are in the list for that space, space them out
-					activeShopItems [numbOfItems].transform.Translate (incXVal * numbOfItems,-30,0);
+					activeShopItems [numbOfItems].transform.Translate (incXVal * numbOfItems,0,0);
 					//Depending on what item it is, get the sprite and make it the new image 
 					activeShopItems [numbOfItems].GetComponent<Image> ().sprite = spaceE [i].getSprite ();
 					//Depending on what item it is, get the cost and make it the new text
