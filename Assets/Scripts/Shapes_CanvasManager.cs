@@ -11,7 +11,7 @@ public class Shapes_CanvasManager : MonoBehaviour {
 	public bool[] haveSeen;
 	private int score = 0;
 	public Text scoreText;
-	private float timeLeft = 10.0f; // Set to game time in seconds
+	private float timeLeft = 30.0f; // Set to game time in seconds
 	public Text timeDisp;
 	private bool gameOver = false;
 
