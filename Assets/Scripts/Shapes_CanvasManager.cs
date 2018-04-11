@@ -76,7 +76,7 @@ public class Shapes_CanvasManager : MonoBehaviour {
 
 	// Called from Shape.cs if shape is won
 	public void winDetected(bool win) {
-		score += 5;  // Just adding 5 to score on a win for testing
+		score += 10;  // Just adding 10 to score on a win for testing
 		switchCanvas();
 	}
 
