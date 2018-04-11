@@ -58,7 +58,7 @@ public class ItemManager : MonoBehaviour {
 	public bool isDecorate = true;
 
 
-	public int neurobucks = 0;
+	public int neurobucks = 9000;
 	// Use this for initialization
 	void Start () {
 		//yVal = -926;
